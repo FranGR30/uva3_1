@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienvenida</title>
+    <script>
+        function mostrarMensaje() {
+            var nombre = document.getElementById("nombre").value;
+            var apellido = document.getElementById("apellido").value;
+            var ciudad = document.getElementById("ciudad").value;
+
+            var mensaje = "¡Bienvenido, " + nombre + " " + apellido + " de " + ciudad + "!";
+            document.getElementById("mensajeBienvenida").innerHTML = mensaje;
+        }
+    </script>
+</head>
+<body>
+    <h1>Ingresa tus datos:</h1>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre"><br>
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido"><br>
+    <label for="ciudad">Ciudad:</label>
+    <input type="text" id="ciudad" name="ciudad"><br><br>
+    <button onclick="mostrarMensaje()">Enviar</button>
+
+    <h1 id="mensajeBienvenida"></h1>
+</body>
+</html>
